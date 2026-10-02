@@ -1,0 +1,20 @@
+<Project>
+
+  <PropertyGroup>
+
+    <!-- Valheim 1.0.x / Unity -->
+    <TargetFramework>netstandard2.1</TargetFramework>
+
+    <LangVersion>8.0</LangVersion>
+
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+
+  </PropertyGroup>
+
+</Project>
