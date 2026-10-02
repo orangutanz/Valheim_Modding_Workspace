@@ -10,7 +10,7 @@ namespace Craftable_Idols
     public class Plugin : BaseUnityPlugin
     {
         public const string PluginGuid =
-            "com.yuhanma.valheim.craftableidols";
+            "com.kiray.valheim.craftableidols";
 
         public const string PluginName =
             "Craftable Idols";
@@ -37,15 +37,106 @@ namespace Craftable_Idols
 
         internal static void AddRecipes()
         {
+            // Battle Idols
             RecipeManager.CustomRecipe(
                 CraftingStationType.Workbench,
-                "FineWood",
-                20,
-                "TrophyEikthyr",
-                1,
-                "Upgrader0Weapon",
-                5);
+                "FineWood", 10,
+                "TrophyEikthyr", 1,
+                "Upgrader0Weapon", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Forge,
+                "Bronze", 10,
+                "TrophyTheElder", 1,
+                "Upgrader1Weapon", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Forge,
+                "Iron", 10,
+                "TrophyBonemass", 1,
+                "Upgrader2Weapon", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Forge,
+                "Silver", 10,
+                "TrophyDragonQueen", 1,
+                "Upgrader3Weapon", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Forge,
+                "BlackMetal", 10,
+                "TrophyGoblinKing", 1,
+                "Upgrader4Weapon", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.BlackForge,
+                "BlackMarble", 10,
+                "TrophySeekerQueen", 1,
+                "Upgrader5Weapon", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.BlackForge,
+                "FlametalNew", 10,
+                "TrophyFader", 1,
+                "Upgrader6Weapon", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.BlackForge,
+                "Gold", 10,
+                "FrozenKingDrop", 1,
+                "Upgrader7Weapon", 5);
+
+            //Protection Idols
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Workbench,
+                "FineWood", 5,
+                "DeerHide", 20,
+                "Upgrader0Armor", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Forge,
+                "Bronze", 5,
+                "TrollHide", 20,
+                "Upgrader1Armor", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Forge,
+                "Iron", 5,
+                "ElderBark", 20,
+                "Upgrader2Armor", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Forge,
+                "Silver", 5,
+                "WolfPelt", 20,
+                "Upgrader3Armor", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.Forge,
+                "BlackMetal", 5,
+                "LoxPelt", 20,
+                "Upgrader4Armor", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.BlackForge,
+                "BlackMarble", 5,
+                "Carapace", 40,
+                "Upgrader5Armor", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.BlackForge,
+                "FlametalNew", 5,
+                "AskHide", 20,
+                "Upgrader6Armor", 5);
+
+            RecipeManager.CustomRecipe(
+                CraftingStationType.BlackForge,
+                "Gold", 5,
+                "MooseHide", 20,
+                "Upgrader7Armor", 5);
+
         }
+
 
         [HarmonyPatch(typeof(Player), "OnSpawned")]
         private static class Player_OnSpawned_Patch
